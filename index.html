@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人网站</title>
+    <link href="css.css" rel="stylesheet"/>
+   
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4562172_8c4lltf688w.css"/>
+</head>
+
+<body>
+    <div class="index">
+        <div class="clock" style="color: aqua;width: 100px; margin-right: 0;margin-left: 22px;margin-top: 23px;">00:00:00</div>
+        <div style="margin-top: 13px;"><a href="index.html" style="color: aquamarine; font-size: 43px;"  class="iconfont icon-a-zhuye2x"></a></div>
+    </div>
+    <!-- ----------------------------------- -->
+    <div class="main">
+        <ul class="mainleft"> <!---左选-->
+            <li class="btli" style="margin-top: 10px;"><a href="" class="a1">C++</a>
+
+                <ul class="droplist">
+                    <li><a href="单链表.html" class="a1">顺序表</a></li>
+                    <li><a href="" class="a1">单链表</a></li>
+                    <li><a href=""class="a1">双链表</a></li>
+                </ul>
+
+
+
+            </li>
+            <!-- ----------------------------------- 下拉1-->
+            <li class="btli"><a href="" class="a1">Python</a>
+                <ul class="droplist">
+                    <li><a href="" class="a1">下拉11</a></li>
+                    <li><a href="" class="a1">下拉12</a></li>
+                    <li><a href=""class="a1">下拉13</a></li>
+                </ul>
+            </li>
+             <!-- -----------------------------------下拉2-->
+            <li class="btli"><a href="" class="a1">QT</a>
+                <ul class="droplist">
+                    <li><a href="" class="a1">下拉11</a></li>
+                    <li><a href="" class="a1">下拉12</a></li>
+                    <li><a href=""class="a1">下拉13</a></li>
+                </ul>
+            </li>
+             <!-- -----------------------------------下拉3 -->
+            <li class="btli"><a href="" class="a1">Mysql</a>
+                <ul class="droplist">
+                    <li><a href="" class="a1">下拉11</a></li>
+                    <li><a href="" class="a1">下拉12</a></li>
+                    <li><a href=""class="a1">下拉13</a></li>
+                </ul>
+            </li>
+             <!-- ----------------------------------- 下拉4 -->
+        </ul>
+
+        <div style="height: 400px;width: 650px;float: left;margin-left: 50px;margin-top: 100px;">
+
+            
+
+        </div>
+    </div>
+    <!-- ------------------------------------ -->
+    <div class="bottom">
+    ---- 2024 Create by Zwf ---- 
+    </div>
+  <!-- ----------------------------------- -->
+   <script>
+    let clock=document.querySelector('.clock')
+    let addzero=(num)=>{
+        if(num>10){
+            return num;
+        }
+        else{
+            return `0${num}`;
+        }
+    };
+    let updatetime=()=>{
+        let now=new Date();
+        let time=addzero(now.getHours())+":"+addzero(now.getMinutes())+":"+addzero(now.getSeconds())
+        clock.innerHTML=time;
+}
+setInterval(updatetime,1000)
+   </script>
+</body>
+</html>
